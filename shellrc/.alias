@@ -16,30 +16,6 @@ alias aliases="alias | sed 's/=.*//'"
 alias functions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'"
 alias paths='echo -e ${PATH//:/\\n}'
 
-# oh-my-zsh style git alias
-alias ga="git add"
-alias gaa="git add --all"
-alias gc="git commit -v"
-alias gc!="git commit -v --amend"
-alias gca="git commit -v -a"
-alias gcam="git commit -a -m"
-alias gca!="git commit -v -a --amend"
-alias gcan!="git commit -v -a -s --no-edit --amend"
-alias gcb="git checkout -b"
-alias gcmsg="git commit -m"
-alias gd="git diff"
-alias gl="git pull"
-alias glg="git log --stat --color"
-alias glgg="git log --graph --color"
-alias gm="git merge"
-alias gp="git push"
-alias gpoat="git push origin --all && git push origin --tags"
-alias gpv="git push -v"
-alias gst="git status"
-
-alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "--wip-- [skip ci]"'
-alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
-
 # zsh default alias
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
