@@ -1,0 +1,10 @@
+# compress
+mktar(){ tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
+mktgz(){ tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
+mktbz(){ tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
+
+# make a dir and cd into it
+mcd(){
+    mkdir -pv "$@"
+    cd "$@"
+}

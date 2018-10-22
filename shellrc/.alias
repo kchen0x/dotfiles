@@ -1,0 +1,59 @@
+# author: kchen0x
+
+############
+#  format  #
+############
+#alias name=value
+#alias name='command'
+#alias name='command arg1 arg2'
+#alias name='/path/to/script'
+#alias name='/path/to/script.pl arg1'
+#unalias aliasname
+
+
+# List declared aliases, functions, paths
+alias aliases="alias | sed 's/=.*//'"
+alias functions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'"
+alias paths='echo -e ${PATH//:/\\n}'
+
+# oh-my-zsh style git alias
+alias ga="git add"
+alias gaa="git add --all"
+alias gc="git commit -v"
+alias gc!="git commit -v --amend"
+alias gca="git commit -v -a"
+alias gcam="git commit -a -m"
+alias gca!="git commit -a -a --amend"
+alias gcan!="git commit -v -a -s --no-edit --amend"
+alias gcb="git checkout -b"
+alias gcmsg="git commit -m"
+alias gd="git diff"
+alias gl="git pull"
+alias glg="git log --stat --color"
+alias glgg="git log --graph --color"
+alias gm="git merge"
+alias gp="git push"
+alias gpoat="git push origin --all && git push origin --tags"
+alias gpv="git push -v"
+alias gst="git status"
+
+alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "--wip-- [skip ci]"'
+alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
+
+# zsh default alias
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+
+# python preference
+alias py="python3"
+alias py2="python2"
+alias python="python3"
+alias pip="pip3"
+
+# aira2
+alias download="aria2c"
+alias dl="aria2c"
+
+# misc
+alias myip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+alias tq="curl 'wttr.in/海淀区?lang=zh&m'"
