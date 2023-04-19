@@ -33,3 +33,6 @@ alias dl="aria2c"
 # misc
 alias myip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
 alias tq="curl 'wttr.in/海淀区?lang=zh&m'"
+
+# ssh and mosh
+alias mosh="mosh --no-init"
