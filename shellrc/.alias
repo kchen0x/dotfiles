@@ -21,10 +21,7 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # python preference
-alias py="python3"
-alias py2="python2"
-alias python="python3"
-alias pip="pip3"
+alias py="python"
 
 # aira2
 alias download="aria2c"
