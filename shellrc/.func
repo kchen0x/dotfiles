@@ -47,6 +47,10 @@ tmosh() {
   mosh --no-init $1 -- tmux new-session -ADs main
 }
 
+zmosh() {
+  mosh --no-init $1 -- zellij attach --create main
+}
+
 exit() {
   if [[ -z $TMUX ]]; then
     builtin exit

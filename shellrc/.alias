@@ -33,3 +33,6 @@ alias tq="curl 'wttr.in/海淀区?lang=zh&m'"
 
 # ssh and mosh
 alias mosh="mosh --no-init"
+
+# zellij
+alias zj="zellij attach --create"
