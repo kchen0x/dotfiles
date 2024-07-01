@@ -48,7 +48,10 @@ tmosh() {
 }
 
 zmosh() {
-  mosh --no-init $1 -- zellij attach --create main
+  mosh --no-init $1 -- /bin/bash -c '
+    DEFAULT_SHELL=$(getent passwd $LOGNAME | cut -d: -f7)
+    exec $DEFAULT_SHELL -i -c "zellij attach --create main"
+  '
 }
 
 exit() {
