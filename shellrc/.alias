@@ -36,3 +36,8 @@ alias mosh="mosh --no-init"
 
 # zellij
 alias zj="zellij attach --create"
+
+# Alias vim to nvim if nvim is available
+if command -v nvim >/dev/null 2>&1; then
+  alias vim='nvim'
+fi
