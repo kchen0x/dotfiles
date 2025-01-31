@@ -43,11 +43,11 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 
 # This is for mosh with tmux
 # https://medium.com/@toja/tip-using-mosh-with-scrollback-257a54a848b3
-tmosh() {
+tm() {
   mosh --no-init $1 -- tmux new-session -ADs main
 }
 
-zmosh() {
+zm() {
   mosh --no-init $1 -- /bin/bash -c '
     DEFAULT_SHELL=$(getent passwd $LOGNAME | cut -d: -f7)
     exec $DEFAULT_SHELL -i -c "zellij attach --create main"
